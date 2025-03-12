@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Mode</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Practice Mode</h1>
+    <div class="mode-selection">
+        <a href="#" onclick="startPractice('easy')" class="button">Easy Mode</a>
+        <a href="#" onclick="startPractice('hard')" class="button">Hard Mode</a>
+    </div>
+
+    <div id="practice-container" class="hidden">
+        <p>Select METAR Parts to Practice:</p>
+        <label><input type="checkbox" id="airport"> Airport</label>
+        <label><input type="checkbox" id="wind"> Wind Speed</label>
+        <label><input type="checkbox" id="temperature"> Temperature</label>
+        <button onclick="generateMETAR()">Start</button>
+    </div>
+
+    <div id="metar-display" class="hidden">
+        <p>Decode this METAR:</p>
+        <p id="metar-text"></p>
+        <input type="text" id="answer" placeholder="Enter your answer">
+        <button onclick="checkMETAR()">Check Answer</button>
+        <p id="result"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
